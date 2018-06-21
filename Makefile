@@ -12,11 +12,14 @@ build-nc:
 run:
 	docker run --rm -it --name="$(APP_NAME)" $(APP_NAME):$(VERSION)
 
+# Run image with bash prompt
 bash:
 	docker run --rm -it --name="$(APP_NAME)" $(APP_NAME):$(VERSION) bash
 
+# Build and run image
 up: build run
 
+# Stop running container
 stop:
 	docker stop $(APP_NAME) && \
 	docker rm $(APP_NAME)
