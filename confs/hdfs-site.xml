@@ -3,6 +3,16 @@
 
 <configuration>
     <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>/opt/hadoop/namenode</value>
+        <description>NameNode directory for namespace and transaction logs storage.</description>
+    </property>
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>/opt/hadoop/datanode</value>
+        <description>DataNode directory</description>
+    </property>
+    <property>
         <name>dfs.replication</name>
         <value>1</value>
     </property>
