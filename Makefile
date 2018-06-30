@@ -2,11 +2,11 @@ include deploy.conf
 
 # Build image
 build:
-	docker build -t $(APP_NAME):$(VERSION) .
+	docker build --build-arg HADOOP_VERSION=$(HADOOP_VERSION) -t $(APP_NAME):$(VERSION) .
 
 # Build image without cache
 build-nc:
-	docker build --no-cache -t $(APP_NAME):$(VERSION) .
+	docker build --no-cache --build-arg HADOOP_VERSION=$(HADOOP_VERSION) -t $(APP_NAME):$(VERSION) .
 
 # Run image
 run:

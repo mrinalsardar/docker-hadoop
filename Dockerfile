@@ -1,7 +1,7 @@
 FROM mrinal449/openjdk
 
 # Set up environment variables
-ENV HADOOP_VERSION=2.9.1
+ARG HADOOP_VERSION
 
 # Install curl, ssh and set up passwordless ssh to localhost
 RUN apt-get update && \
